@@ -6,7 +6,7 @@
 ## 30 lines of code gives you all this extra power in customizing your terminal workflow!
 ## moreover, you're bootstrapping all of this on TOP of whatever shell you already have working! it's completely independent and seamless.
 
-
+import subprocess as sp
 from subprocess import Popen, PIPE
 from time import sleep
 
@@ -72,7 +72,8 @@ while(True):
 					sleep(10)
 					stack.append(5555555)
 				elif command == "printitkiran":
-					print(str(stack))
+					sp.call(["echo", str(stack)])
+					#print(str(stack))
 			old_line_num = line_num # we are caught up!
 
 #########################################################
