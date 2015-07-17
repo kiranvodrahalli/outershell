@@ -36,7 +36,7 @@ from time import sleep
 ##
 ## 2) modify your .bash_aliases to have
 ##
-##         alias printitkiran='tail -1 path/to/outershell/nohup.out'
+##         alias printitkiran='tail -1 path/to/outershell/outershell.out'
 ##
 ## This is so that you see the output when you print it. You should do this sort of thing for anything that you want to print
 ## out to your shell.
@@ -46,7 +46,7 @@ from time import sleep
 ##
 
 
-## TODO: 1) implement a save (i.e. pickle relevant data structures - data structures are still TBD)
+## TODO: 1) implement a save (i.e. pickle relevant data structures - data structures are still TBD) - also ensure that at the start of each shell session, this outershell is running and loads the relevant pickle files that it has saved.
 ##       2) for the commands defined in the supported commands, give them aliases to "" or make them some function in .bash_profile
 ##         so that they don't spit out "command not recognized"
 ##       3) additionally, enable some bash scripts to automatically start/status/stop this (i.e. nohup python teststack.py &, save the pid, be able to kill it and save the new one to a common file)
@@ -55,7 +55,8 @@ from time import sleep
 ##          (note: since this isn't on a network, we just need to find the command that displays all active processes/pids and then grep for python, probably. 
 ##           (actually we are going to store the pid of the process when we start it))
 ##       6) make a separate file for the function names added via outershell/augshell
-##       7) potentially should not redirect to nohup.out, but something else: http://unix.stackexchange.com/questions/45913/is-there-a-way-to-redirect-nohup-output-to-a-log-file-other-than-nohup-out
+
+##       7) potentially should not redirect to nohup.out, but something else: http://unix.stackexchange.com/questions/45913/is-there-a-way-to-redirect-nohup-output-to-a-log-file-other-than-nohup-out - yes, use this command: nohup python teststack.py > outershell.out&, for instance.
 ##
 ##
 
