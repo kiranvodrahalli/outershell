@@ -36,6 +36,8 @@ from time import sleep
 ## This is so that you see the output when you print it. You should do this sort of thing for anything that you want to print
 ## out to your shell.
 ##
+## Currently, there is a small bug - you have to run the alias command twice in order to see the most recent output.
+## Working on fixing it now.
 ##
 
 
