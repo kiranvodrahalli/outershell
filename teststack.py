@@ -30,7 +30,6 @@ from time import sleep
 ##
 ## This allows the .bash_history to be updated automatically.
 
-# 0) Save this on github!
 ## TODO: 1) implement a save (i.e. pickle relevant data structures - data structures are still TBD)
 ##       2) for the commands defined in the supported commands, give them aliases to "" or make them some function in .bash_profile
 ##         so that they don't spit out "command not recognized"
