@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "teststack.py", line 5, in <module>
+    while(true):
+NameError: name 'true' is not defined
