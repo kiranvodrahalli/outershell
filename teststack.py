@@ -36,6 +36,7 @@ from time import sleep
 ##       5) test if when you close the bash shell, the nohup background python program stops too - it should not! (i.e. it should persist). need the equivalent of netstat -tnlp to see the process...
 ##          (note: since this isn't on a network, we just need to find the command that displays all active processes/pids and then grep for python, probably. 
 ##           (actually we are going to store the pid of the process when we start it))
+##       6) make a separate file for the function names added via outershell/augshell
 
 
 
