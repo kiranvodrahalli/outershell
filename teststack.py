@@ -14,6 +14,11 @@ from time import sleep
 # this basically is a very simple hack to enable you to easily hack on top of a bash shell additional functionality through writing Python.
 # it's a bit more complicated than this though! this also allows you to persist your own datastructures and so on! this is not possible in bash to my knowledge 
 # i.e. you cannot have all your commands be aware of some defined data structures/objects - this is possible here! and it's possible to use with other libraries as well!
+# The main idea is that you're just updating these data structures rather than creating/deleting them - these are data structures you want
+# to be always present, and you're just modifying their contents as you do your work. This is likely most useful for daily tasks like# note-taking, link-saving, perhaps basic computations, potentially other things! I'm betting on the power of a programming language
+# to result in lots of use-cases for this sort of thing. Emacs/Vim power-users might not find this as useful since you can probably
+# do pretty much anything you'd do here with them. However, this has the advantage of being a lot easier to set up and potentially
+# easier to modify.
 
 ## Usage: python teststack.py 
 ##  Then, in some other shell window, enter the commands as you wish and watch them appear. 
