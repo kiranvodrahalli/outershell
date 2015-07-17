@@ -28,6 +28,16 @@ from time import sleep
 ##         export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 ##
 ## This allows the .bash_history to be updated automatically.
+##
+## 2) modify your .bash_aliases to have
+##
+##         alias printitkiran='tail -1 path/to/outershell/nohup.out'
+##
+## This is so that you see the output when you print it. You should do this sort of thing for anything that you want to print
+## out to your shell.
+##
+##
+
 
 ## TODO: 1) implement a save (i.e. pickle relevant data structures - data structures are still TBD)
 ##       2) for the commands defined in the supported commands, give them aliases to "" or make them some function in .bash_profile
