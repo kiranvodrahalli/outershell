@@ -10,6 +10,7 @@
 from subprocess import Popen, PIPE
 from time import sleep
 
+# Description
 # this basically is a very simple hack to enable you to easily hack on top of a bash shell additional functionality through writing Python.
 # it's a bit more complicated than this though! this also allows you to persist your own datastructures and so on! this is not possible in bash to my knowledge 
 # i.e. you cannot have all your commands be aware of some defined data structures/objects - this is possible here! and it's possible to use with other libraries as well!
