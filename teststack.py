@@ -55,7 +55,9 @@ from time import sleep
 ##          (note: since this isn't on a network, we just need to find the command that displays all active processes/pids and then grep for python, probably. 
 ##           (actually we are going to store the pid of the process when we start it))
 ##       6) make a separate file for the function names added via outershell/augshell
-
+##       7) potentially should not redirect to nohup.out, but something else: http://unix.stackexchange.com/questions/45913/is-there-a-way-to-redirect-nohup-output-to-a-log-file-other-than-nohup-out
+##
+##
 
 
 stack = []
