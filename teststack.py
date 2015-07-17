@@ -20,8 +20,6 @@ from time import sleep
 ## Usage(2): nohup python teststack.py &
 ##  Runs the process in the background. Need to be sure to save the pid so that you can kill -9 the process when you want to shut it down. 
 
-
-
 ## neccessities for setup:
 ## 1) modify your .bash_profile to have the following lines:
 ##
@@ -60,7 +58,8 @@ while(True):
 			output, err = p.communicate(b"")
 			commands = map(lambda line: line.strip(), output.split("\n"))
 			for command in commands:
-				# Currently supported command options
+				# Currently supported command options 
+				# can do syntax parsing etc. here too. (put in separate functions)
 				if command == "":
 					continue
 				if command == "hellotherekiran":
@@ -75,11 +74,12 @@ while(True):
 			old_line_num = line_num # we are caught up!
 
 #########################################################
+# The old time-based solution to handle checking if there is a new command (rather than the same old one sitting around)
 
 #from lastmod import last as last_edit
 #import time
 
-# The old time-based solution to handle checking if there is a new command (rather than the same old one sitting around)
+
 '''
 stack = []
 i = 0
