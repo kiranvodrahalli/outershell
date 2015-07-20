@@ -23,7 +23,7 @@ from time import sleep
 ## Usage: python teststack.py 
 ##  Then, in some other shell window, enter the commands as you wish and watch them appear. 
 
-## Usage(2): nohup python teststack.py &
+## Usage(2): nohup python teststack.py > outershell.out &
 ##  Runs the process in the background. Need to be sure to save the pid so that you can kill -9 the process when you want to shut it down. 
 
 ## neccessities for setup:
