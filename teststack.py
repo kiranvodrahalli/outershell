@@ -50,6 +50,8 @@ from time import sleep
 ##       2) for the commands defined in the supported commands, give them aliases to "" or make them some function in .bash_profile
 ##         so that they don't spit out "command not recognized"
 ##       3) additionally, enable some bash scripts to automatically start/status/stop this (i.e. nohup python teststack.py &, save the pid, be able to kill it and save the new one to a common file)
+##          -- subpoint: starting the process should run the line |    echo (the pid) > curr_pid.txt
+##          --           stopping the process should read from curr_pid.txt to find the pid to kill
 ##       4) along the lines of 1): figure out what the primary data structures and functions should be, and enable an easy way of adding to it
 ##       5) test if when you close the bash shell, the nohup background python program stops too - it should not! (i.e. it should persist). need the equivalent of netstat -tnlp to see the process...
 ##          (note: since this isn't on a network, we just need to find the command that displays all active processes/pids and then grep for python, probably. 
