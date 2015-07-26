@@ -37,9 +37,14 @@ from time import sleep
 ## 2) modify your .bash_aliases to have
 ##
 ##         alias printitkiran='tail -1 path/to/outershell/outershell.out'
+##		   alias hellotherekiran=''
 ##
 ## This is so that you see the output when you print it. You should do this sort of thing for anything that you want to print
-## out to your shell.
+## out to your shell. For all the Python commands, basically define the command so that it is the empty string.
+## In the future, we will provide a file called "aliases.txt" with all necessary aliases. 
+## You can then just add it to your .bash_profile by doing:
+##
+##         echo aliases.txt >> path/to/.bash_profile
 ##
 ## Currently, there is a small bug - you have to run the alias command twice in order to see the most recent output.
 ## Working on fixing it now.
@@ -49,8 +54,9 @@ from time import sleep
 ## TODO: 1) implement a save (i.e. pickle relevant data structures - data structures are still TBD) - also ensure that at the start of each shell session, this outershell is running and loads the relevant pickle files that it has saved.
 ##       2) for the commands defined in the supported commands, give them aliases to "" or make them some function in .bash_profile
 ##         so that they don't spit out "command not recognized"
+##		 2.5) NEED TO HAVE A SPECIFIC ALIASES FOLDER and organize it nicely with the PYTHON commands!
 ##       3) additionally, enable some bash scripts to automatically start/status/stop this (i.e. nohup python teststack.py &, save the pid, be able to kill it and save the new one to a common file)
-##          -- subpoint: starting the process should run the line |    echo (the pid) > curr_pid.txt
+##          -- subpoint: starting the process should run the line:    echo (the pid) > curr_pid.txt
 ##          --           stopping the process should read from curr_pid.txt to find the pid to kill
 ##       4) along the lines of 1): figure out what the primary data structures and functions should be, and enable an easy way of adding to it
 ##       5) test if when you close the bash shell, the nohup background python program stops too - it should not! (i.e. it should persist). need the equivalent of netstat -tnlp to see the process...
@@ -89,13 +95,15 @@ while(True):
 				if command == "hellotherekiran":
 					stack.append(i)
 					i += 1
+					# keep track of what it should look like in outershell.out WHEN YOU DO THE COMMAND
+					sp.call(["echo", str(stack)]) 
 				elif command == "pausedkiran":
 					# for testing that it can correctly execute the missed commands
 					sleep(10)
 					stack.append(5555555)
 				elif command == "printitkiran":
-					sp.call(["echo", str(stack)])
-					#print(str(stack))
+					# this is defined as an alias - probably doesn't need to be defined as a function
+					print ""
 			old_line_num = line_num # we are caught up!
 
 #########################################################
