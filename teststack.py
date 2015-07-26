@@ -38,6 +38,7 @@ from time import sleep
 ##
 ##         alias printitkiran='tail -1 path/to/outershell/outershell.out'
 ##		   alias hellotherekiran=''
+##         alias pausedkiran=''
 ##
 ## This is so that you see the output when you print it. You should do this sort of thing for anything that you want to print
 ## out to your shell. For all the Python commands, basically define the command so that it is the empty string.
@@ -55,6 +56,8 @@ from time import sleep
 ##       2) for the commands defined in the supported commands, give them aliases to "" or make them some function in .bash_profile
 ##         so that they don't spit out "command not recognized"
 ##		 2.5) NEED TO HAVE A SPECIFIC ALIASES FOLDER and organize it nicely with the PYTHON commands!
+##       2.6) Define all the Python functions in a separate file called functions.py; map names to functions in a dict; 
+##            create a pickle file that's loaded (though provide original file as well). Maybe don't need the pickle file.
 ##       3) additionally, enable some bash scripts to automatically start/status/stop this (i.e. nohup python teststack.py &, save the pid, be able to kill it and save the new one to a common file)
 ##          -- subpoint: starting the process should run the line:    echo (the pid) > curr_pid.txt
 ##          --           stopping the process should read from curr_pid.txt to find the pid to kill
@@ -63,10 +66,10 @@ from time import sleep
 ##          (note: since this isn't on a network, we just need to find the command that displays all active processes/pids and then grep for python, probably. 
 ##           (actually we are going to store the pid of the process when we start it))
 ##       6) make a separate file for the function names added via outershell/augshell
-
-##       7) potentially should not redirect to nohup.out, but something else: http://unix.stackexchange.com/questions/45913/is-there-a-way-to-redirect-nohup-output-to-a-log-file-other-than-nohup-out - yes, use this command: nohup python teststack.py > outershell.out&, for instance.
+##       7) potentially should not redirect to nohup.out, but something else: http://unix.stackexchange.com/questions/45913/is-there-a-way-to-redirect-nohup-output-to-a-log-file-other-than-nohup-out
+##          - yes, use this command: nohup python teststack.py > outershell.out&, for instance.
 ##
-##
+##       8) 
 
 
 stack = []
